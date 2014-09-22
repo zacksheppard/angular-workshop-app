@@ -15,12 +15,8 @@
         </ul>
       </div>
     </div>
-    <div ng-view></div>
-    <h1>Hello {{name}}</h1>
-    <input type="text" ng-model="name" >
-    <button ng-click="updateName()" class="btn">
-      Submit
-    </button>
+    <div ng-controller="ShotsListCtrl"></div>
+
   </div>
   <script src="lib/angular/angular.js"></script>
   <script src="js/app.js"></script>
