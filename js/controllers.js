@@ -6,11 +6,16 @@ controllers.controller('AppCtrl', function ($scope){
   $scope.name = "Module";
 });
 
-controllers.controller('ShotsListCtrl', function($scope, $http){
+controllers.controller('ShotsListCtrl', function($scope, $routeParams, $http) {
+
+  var list = $routeParams.list;
   $scope.list;
-  $http.jsonp('http://api.dribbble.com/shots/popular?callback=JSON_CALLBACK').then(function(data){
+  $http.jsonp('http://api.dribbble.com/shots/' + list + '?callback=JSON_CALLBACK').then(function(data){
       $scope.list = data.data;
       console.log(data);
   })
-})
+});
 
+controllers.controller('ShotsCtrl', function($scope){
+  
+});
