@@ -21,7 +21,7 @@ controllers.controller('ShotsListCtrl', function($scope, dribbble, $routeParams,
       $scope.list.shots = $scope.list.shots.concat(data.data.shots); 
       console.log(data);
     })
-  }
+  } 
 });
 
 controllers.controller('ShotsCtrl', function($scope, $routeParams, dribbble){
